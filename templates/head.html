@@ -1,37 +1,24 @@
 <meta charset="utf-8"/>
 
 {% if context.player_name %}
-    <title>Screenly OSE - {{ context.player_name }}</title>
+    <title>Mediaz-Electronics Signage-Player - {{ context.player_name }}</title>
 {% else %}
-    <title>Screenly OSE</title>
+    <title>Mediaz-Electronics Signage-Player</title>
 {% endif %}
 
-<link href="/static/favicons/apple-touch-icon-57x57.png" rel="apple-touch-icon-precomposed" sizes="57x57"/>
-<link href="/static/favicons/apple-touch-icon-114x114.png" rel="apple-touch-icon-precomposed" sizes="114x114"/>
-<link href="/static/favicons/apple-touch-icon-72x72.png" rel="apple-touch-icon-precomposed" sizes="72x72"/>
-<link href="/static/favicons/apple-touch-icon-144x144.png" rel="apple-touch-icon-precomposed" sizes="144x144"/>
-<link href="/static/favicons/apple-touch-icon-60x60.png" rel="apple-touch-icon-precomposed" sizes="60x60"/>
-<link href="/static/favicons/apple-touch-icon-120x120.png" rel="apple-touch-icon-precomposed" sizes="120x120"/>
-<link href="/static/favicons/apple-touch-icon-76x76.png" rel="apple-touch-icon-precomposed" sizes="76x76"/>
-<link href="/static/favicons/apple-touch-icon-152x152.png" rel="apple-touch-icon-precomposed" sizes="152x152"/>
-<link href="/static/favicons/favicon-196x196.png" rel="icon" sizes="196x196" type="image/png"/>
-<link href="/static/favicons/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png"/>
-<link href="/static/favicons/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
-<link href="/static/favicons/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
-<link href="/static/favicons/favicon-128.png" rel="icon" sizes="128x128" type="image/png"/>
-<meta content="screenly-ose;" name="application-name"/>
-<meta content="#FFFFFF" name="msapplication-TileColor"/>
-<meta content="/static/favicons/mstile-144x144.png" name="msapplication-TileImage"/>
-<meta content="/static/favicons/mstile-70x70.png" name="msapplication-square70x70logo"/>
-<meta content="/static/favicons/mstile-150x150.png" name="msapplication-square150x150logo"/>
-<meta content="/static/favicons/mstile-310x150.png" name="msapplication-wide310x150logo"/>
-<meta content="/static/favicons/mstile-310x310.png" name="msapplication-square310x310logo"/>
+<link rel="apple-touch-icon" sizes="180x180" href="/static/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/static/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/static/favicons/favicon-16x16.png">
+<link rel="manifest" href="/static/favicons/site.webmanifest">
+<link rel="mask-icon" href="/static/favicons/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/static/favicons/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/static/favicons/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
 
 <link href="{{ url_for('static', filename='css/screenly.css') }}" rel="stylesheet"/>
 
 <link href="{{ url_for('static', filename='fontawesome/css/all.css') }}" rel="stylesheet"/>
-
-<script async defer src="https://buttons.github.io/buttons.js"></script>
 
 <script src="{{ url_for('static', filename='js/jquery-1.9.1.min.js') }}"></script>
 

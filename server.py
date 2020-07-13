@@ -1451,19 +1451,11 @@ class Info(Resource):
     method_decorators = [api_response, authorized]
 
     def get(self):
-        viewlog = None
-        try:
-            viewlog = [line.decode('utf-8') for line in
-                       check_output(['sudo', 'systemctl', 'status', 'screenly-viewer.service', '-n', '20']).split('\n')]
-        except:
-            pass
-
         # Calculate disk space
         slash = statvfs("/")
         free_space = size(slash.f_bavail * slash.f_frsize)
 
         return {
-            'viewlog': viewlog,
             'loadavg': diagnostics.get_load_avg()['15 min'],
             'free_space': free_space,
             'display_info': diagnostics.get_monitor_status(),
@@ -1748,12 +1740,6 @@ def settings_page():
 @app.route('/system-info')
 @authorized
 def system_info():
-    try:
-        viewlog = [line.decode('utf-8') for line in
-                   check_output(['sudo', 'systemctl', 'status', 'screenly-viewer.service', '-n', '20']).split('\n')]
-    except Exception:
-        viewlog = None
-
     loadavg = diagnostics.get_load_avg()['15 min']
 
     display_info = diagnostics.get_monitor_status()
@@ -1800,7 +1786,6 @@ def system_info():
     return template(
         'system-info.html',
         player_name=player_name,
-        viewlog=viewlog,
         loadavg=loadavg,
         free_space=free_space,
         uptime=system_uptime,

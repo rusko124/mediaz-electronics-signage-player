@@ -14,7 +14,8 @@
   box-shadow: $shadow;
 }
 
-$footerHeight: 84px;
+$navbarHeight: 85px;
+$footerHeight: 0px;
 $secondaryColor: #6c757d;
 $baseLineHeight: 20px !default;
 
@@ -25,7 +26,7 @@ html {
 
 body {
   background-color: #f0f0f0;
-  margin-top: 95px;
+  margin-top: $navbarHeight;
   margin-bottom: $footerHeight + $baseLineHeight;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -60,7 +61,7 @@ label {
 }
 
 .splash {
-  background: url(../img/bg.jpg) center center no-repeat #370c6c;
+  background-color: $black;
   background-size: 100% 100%;
   margin-top: 0;
   font-size: calc((1.5vw + 1.5vh) / 2);
@@ -113,7 +114,7 @@ label {
 .navbar {
   padding: 5px 0px;
   &.navbar-header {
-    height: 85px;
+    height: $navbarHeight;
   }
 
   .container {
